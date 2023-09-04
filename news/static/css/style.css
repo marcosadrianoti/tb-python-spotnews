@@ -1,0 +1,204 @@
+html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+* {
+    border: none;
+    color: rgb(239,241,244);
+    margin: 0;
+    list-style: none;
+    padding: 0;
+    text-decoration: none;
+}
+
+body {
+    align-items: center;
+    background-color: rgb(27,26,28);
+    display: flex;
+    flex-direction: column;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    height: 100%;
+}
+
+.news-container, .header {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 15px;
+    width: 90%;
+}
+
+.header {
+    background-color: rgb(30,39,49);
+    position: fixed;
+    width: 100%;
+}
+
+nav {
+    display: flex;
+    width: 100%;
+}
+
+.header-links {
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+    text-decoration: none;
+    width: 100%;
+}
+
+.header-links li:hover {
+    scale: 1.5;
+}
+
+.news-container {
+    margin-top: 60px;
+}
+
+.news-card {
+    align-items: center;
+    background-color: rgb(30,39,49);
+    border: 1px solid rgb(51, 51, 51);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    height: 200px;
+    justify-content: space-around;
+    margin: 10px 0;
+    text-align: center;
+    width: 27%;
+}
+
+.news-card:hover {
+    scale: 1.1;
+}
+
+.news-card img {
+    margin-top: 10px;
+    width: 60%;
+}
+
+.news-title {
+    font-size: 14pt;
+}
+
+news-date {
+    font-size: 10pt;
+}
+
+.news-detail {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    font-size: 16pt;
+    height: 75%;
+    justify-content: space-around;
+    margin-top: 80px;
+    text-align: center;
+    width: 80%;
+}
+
+.write-by, .date-post, .news-categories {
+    font-size: 10pt;
+}
+
+.news-author, .date-post span {
+    font-size: 16pt;
+}
+
+.news-detail img {
+    width: 50%;
+}
+
+.news-categories {
+    align-items: center;
+    display: flex;
+}
+
+.news-categories p {
+    font-size: 16pt;
+    margin-left: 10px;
+}
+
+.news-form, .categories-form {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100vh;
+    margin-top: 80px;
+    text-align: center;
+    width: 90%;
+}
+
+.news-form input, .news-form textarea, .news-form select {
+    border-radius: 5px;
+    border: 1px solid rgb(51, 51, 51);
+    color: black;
+    margin: 10px 0;
+    padding: 5px;
+    width: 60%;
+}
+
+#id_categories {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+#id_categories div {
+    align-items: center;
+    display: flex;
+    cursor: pointer; 
+    justify-content: space-around;
+    margin-bottom: 8px;
+    width: 15%;
+    
+}
+
+#id_image {
+    color: aliceblue;
+    border: none;
+}
+
+#id_categories input[type="checkbox"] {
+    border: none;
+    height: 18px;
+    width: 18px;
+}
+
+#id_categories input[type="checkbox"]:hover, #id_categories label:hover {
+    cursor: pointer;
+}
+
+button {
+    background-color: rgb(29, 111, 29);
+    border-radius: 10px;
+    color: rgb(220, 220, 220);
+    font-size: 14pt;
+    margin: 20pt 0;
+    padding: 10px;
+    width: 20%;
+}
+
+.categories-form {
+    justify-content: space-evenly;
+    height: 50vh;
+}
+
+.categories-form div {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 20%;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.categories-form input {
+    width: 40%;
+}
