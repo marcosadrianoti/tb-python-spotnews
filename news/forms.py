@@ -19,25 +19,3 @@ class NewsForm(forms.ModelForm):
             'created_at': forms.DateInput(attrs={'type': 'date'}),
             'author': forms.Select(),
         }
-
-    # def __init__(self, *args, **kwargs):
-    #     super().__init__(*args, **kwargs)
-    #     self.fields["title"].label = "Título"
-    #     self.fields["content"].label = "Conteúdo"
-    #     self.fields["author"].label = "Autoria"
-    #     self.fields["author"].widget = forms.Select(
-    #         choices=[
-    #             (author.id, author.name)
-    #             for author in Categories.objects.all()
-    #         ])
-    #     self.fields["created_at"].label = "Criado em"
-    #     self.fields["created_at"].widget = forms.DateInput(
-    #             attrs={"type": "date"})
-    #     self.fields["categories"].widget = forms.CheckboxSelectMultiple(
-    #         choices=[
-    #             (category.id, category.name)
-    #             for category in Categories.objects.all()
-    #         ]
-    #     )
-
-

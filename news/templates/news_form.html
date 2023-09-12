@@ -5,7 +5,7 @@
 {% endblock %}
 
 {% block content %}
-  <form method="post" action="{% url 'news-form2' %}" enctype="multipart/form-data">
+  <form method="post" action="{% url 'news-form' %}" enctype="multipart/form-data">
     {% csrf_token %}
     <label for="{{ form.title.id_for_label }}">Título</label>
     {{ form.title }}<br/>
