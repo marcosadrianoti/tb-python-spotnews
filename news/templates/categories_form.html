@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %}
+  <title> Formulário para Nova Categoria </title>
+{% endblock %}
+
+{% block content %}
+  <h1> Formulário para Nova Categoria </h1>
+  <form method="post" action="{% url 'categories-form' %}">
+    {% csrf_token %}
+    <label for="{{ form.name.auto_id }}">Nome</label>
+    {{ form.name }}
+    <button type="submit">
+      Salvar
+    </button>
+  </form>
+{% endblock %}

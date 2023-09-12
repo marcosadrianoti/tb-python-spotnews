@@ -15,7 +15,7 @@
           <span class="news-date">
             {{ news.created_at|date:"d/m/Y" }}
           </span>
-          <img src="{% static news.image %}" alt="{{ news.title }}">
+          <img src="{% static news.image.url %}" alt="{{ news.title }}">
         </div>
       {% endfor %}
 {% endblock %}
