@@ -1,11 +1,12 @@
 from django.shortcuts import redirect, render, get_object_or_404
 
-from news.forms import CategoryForm
+from news.forms import CategoryForm, NewsForm
 from .models import News
 
 
 def home(request):
     context = {"all_news": News.objects.all()}
+    print('=============', News.objects.all())
     return render(request, 'home.html', context)
 
 
@@ -23,3 +24,26 @@ def categories_form(request):
             return redirect('home-page')
 
     return render(request, 'categories_form.html', {'form': form})
+
+
+def news_form(request):
+    form = NewsForm()
+    # if request.method == 'POST':
+    #     form = NewsForm(request.POST, request.FILES)
+    #     print(form.is_valid())
+    #     print(form.errors)
+    #     if form.is_valid():
+    #         form.save()
+    #         return redirect('home-page')
+
+    return render(request, 'news_form.html', {'form': form})
+
+
+def creat_new(request):
+    if request.method == 'POST':
+        form = NewsForm(request.POST, request.FILES)
+        print(form.is_valid())
+        print(form.errors)
+        if form.is_valid():
+            form.save()
+            return redirect('home-page')

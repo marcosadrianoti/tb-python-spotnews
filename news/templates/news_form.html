@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block title %}
+  <title>Formulário para Nova Notícia</title>
+{% endblock %}
+
+{% block content %}
+  <form method="post" action="{% url 'news-form2' %}" enctype="multipart/form-data">
+    {% csrf_token %}
+    <label for="{{ form.title.id_for_label }}">Título</label>
+    {{ form.title }}<br/>
+    <label for="{{ form.content.id_for_label }}">Conteúdo</label>
+    {{ form.content }}<br/>
+    <label for="{{ form.author.id_for_label }}">Autoria</label>
+    {{ form.author }}<br/>
+    <label for="{{ form.created_at.id_for_label }}">Criado em</label>
+    {{ form.created_at }}<br/>
+    <label for="{{ form.image.id_for_label }}">URL da Imagem</label>
+    {{ form.image }}<br/>
+    {{ form.categories }}<br/>
+    <button type="submit">Salvar</button>
+  </form>
+{% endblock %}
