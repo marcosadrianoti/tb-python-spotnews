@@ -29,7 +29,7 @@ class News(models.Model):
     )
     image = models.ImageField(upload_to="img/", null=True, blank=True)
     categories = models.ManyToManyField(
-        "Categories"
+        "Categories", blank=False, null=False
     )
 
     def __str__(self):

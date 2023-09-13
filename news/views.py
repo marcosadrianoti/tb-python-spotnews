@@ -30,7 +30,9 @@ def news_form(request):
     if request.method == 'POST':
         form = NewsForm(request.POST, request.FILES)
         if form.is_valid():
-            form.save()
+            a = form.save()
+            print('========', a)
+            # form.save()
             return redirect('home-page')
 
     return render(request, 'news_form.html', {'form': form})
