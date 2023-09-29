@@ -4,7 +4,7 @@ Projeto desenvolvido por mim durante o curso de Desenvolvimento Web na Trybe. Di
 <details>
 <summary><strong>Objetivos do projeto:</strong></summary>
  
-  * Desenvolver uma aplicação que faz consultas em notícias sobre tecnologia usando raspagem de dados no [_blog da Trybe_](https://blog.betrybe.com).
+  * Desenvolver uma aplicação que armazena notícias que podem ser categorizadas por um usuário cadastrado.
   * Verificar se sou capaz de:
     * Escrever aplicações usando Django e Django Rest Framework.
     * Desenvolver uma aplicação que usa a arquitetura Model-View-Template.
@@ -62,17 +62,13 @@ Instale as dependências no ambiente virtual:
 python3 -m pip install -r dev-requirements.txt
 ```
 
-Suba o projeto pelo docker:
+Para rodar o MySQL via Docker execute os seguintes comandos na raiz do projeto:
 ```bash
-docker compose up translate
+docker build -t spotnews-db .
+docker run -d -p 3306:3306 --name=spotnews-mysql-container -e MYSQL_ROOT_PASSWORD=password -e MYSQL_DATABASE=spotnews_database spotnews-db
 ```
 
 Rode a aplicação e acesse [http://127.0.0.1:8000/](http://127.0.0.1:8000/):
 ```bash
-python3 src/app.py
-```
-
-Execute testes com:
-```bash
-python3 -m pytest
+python manage.py runserver
 ```
