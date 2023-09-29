@@ -38,13 +38,13 @@ cd meu-diretorio
 Clone o projeto com o comando `git clone`:
 
 ```bash
-git clone git@github.com:marcosadrianoti/tb-python-traduzo.git
+git clone git@github.com:marcosadrianoti/tb-python-spotnews.git
 ```
 
 Acesse o diretório do projeto com o comando `cd`:
 
 ```bash
-cd tb-python-traduzo
+cd tb-python-spotnews
 ```
 
 crie o ambiente virtual:
