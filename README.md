@@ -13,14 +13,17 @@ Projeto desenvolvido por mim durante o curso de Desenvolvimento Web na Trybe. Di
 <details>
 <summary><strong> Requisitos do projeto:</strong></summary>
 
-  * MODEL - Instanciando idiomas
-  * MODEL - Conversão atributo self.data para Dicionário
-  * MODEL - Listagem de Idiomas como Dicionários
-  * CONTROLLER & VIEW - Endpoint Tradutor, renderizando variáveis do Backend
-  * CONTROLLER - Tradução de Texto - Post
-  * CONTROLLER - Tradução Reversa
-  * TESTS - Histórico de Traduções
-  * API GET - Endpoint de Listagem de Histórico de Traduções.
+  * Criar a migrate e o model `Categories`.
+  * Criar a migrate e o model `Users`.
+  * Criar a migrate e o model `News`.
+  * Criar a página Inicial.
+  * Criar a página de detalhes de uma Notícia.
+  * Criar a página de Formulário de uma nova Categoria.
+  * Criar a página de Formulário de uma nova Notícia.
+  * Criar a rota `/api/categories/` com o DRF.
+  * Criar a rota `/api/users/` com o DRF.
+  * Requisito Bônus:
+    * Criar a rota `/api/news/` com o DRF.
 </details>
   
 ## Rodando o projeto localmente
